@@ -6,25 +6,6 @@ Code examples for **[Go Engineering Notes](https://sch39.dev)** — a practical 
 
 ---
 
-## Series Overview
-
-Go Engineering Notes is organized into **10 major sections**, each focusing on a specific aspect of Go development:
-
-| ID | Series | Focus |
-|----|--------|-------|
-| **G01** | **Go Fundamentals for Developers** | Semantics (value vs pointer), packages, slices, maps, interfaces, errors, context |
-| **G02** | **Application Design & CRUD** | REST APIs with `net/http`, PostgreSQL with `pgx`, validation, transactions, auth |
-| **G03** | **Concurrency & Goroutines** | Goroutines, channels, mutexes, race conditions, deadlocks, goroutine leaks, worker pools |
-| **G04** | **Memory, Performance & Leaks** | Memory allocation, leak detection, profiling with `pprof`, benchmarking, optimization |
-| **G05** | **HTTP & Network Protocols** | HTTP lifecycle, streaming, file uploads (TUS), SSE, WebSocket, gRPC, reverse proxy |
-| **G06** | **Database & Data Processing** | Connection pooling, N+1 queries, batch inserts, pagination, transactions, optimistic locking |
-| **G07** | **Background Jobs & Distributed Systems** | Worker lifecycle, retries, idempotency, job queues, graceful shutdown, outbox pattern |
-| **G08** | **Testing & Debugging** | Table-driven tests, HTTP testing, integration tests, race detection, fuzzing, profiling |
-| **G09** | **Production & Deployment** | Configuration, structured logging, health checks, observability, security, containers, CI |
-| **G10** | **Go Implementation Recipes** | Practical patterns: ZIP streaming, CSV parsing, idempotency keys, email delivery, CLI tools |
-
----
-
 ## How to Use This Repository
 
 ### 1. Reading an Article
@@ -49,46 +30,41 @@ go test -race ./...
 
 ## Publication Status
 
-### Batch 1 — Go Essentials (Target: 6 articles)
-- [ ] G01-03 — Slices Explained: Length, Capacity, and Backing Arrays
-- [ ] G01-02 — Value vs Pointer Semantics in Go
-- [ ] G01-05 — Interfaces in Go: Implicit Implementation and Practical Design
-- [ ] G01-06 — Error Handling in Go: Wrapping, Checking, and Sentinel Errors
-- [ ] G01-11 — `io.Reader` and `io.Writer`: Foundation for Upload & Streaming
-- [ ] G01-10 — Go Context: Cancellation, Deadlines, and Request Scope
+### Batch 1 — Go Fundamentals for Developers (Target: 16 articles)
+- [x] G01-01 - Go Project Structure: Packages, Modules, and Imports
+- [x] G01-02 - Value vs Pointer Semantics in Go
+- [ ] G01-03 - Slices Explained: Length, Capacity, and Backing Arrays
+- [ ] G01-04 - Maps in Go: Zero Values, Mutability, and Concurrency
+- [ ] G01-05 - Interfaces in Go: Implicit Implementation and Practical Design
+- [ ] G01-06 - Error Handling in Go: Wrapping, Checking, and Sentinel Errors
+- [ ] G01-07 - `defer`, `panic`, and `recover`: When to Use Them
+- [ ] G01-08 - Generics in Go: Practical Use Cases Without Overengineering
+- [ ] G01-09 - Functional Options Pattern: When It Helps and When It Doesn't
+- [ ] G01-10 - Go Context: Cancellation, Deadlines, and Request Scope
+- [ ] G01-11 - `io.Reader` and `io.Writer`: The Interfaces Everything Is Built On
+- [ ] G01-12 - Struct Embedding and Composition (Not Inheritance)
+- [ ] G01-13 - Loop Variable Semantics and Closures
+- [ ] G01-14 - Iterators with `range` over Functions
+- [ ] G01-15 - Time in Go: `time.Time`, Monotonic Clock, Timezones, Timers
+- [ ] G01-16 - JSON Pitfalls: `omitempty`, Numbers, Unknown Fields, Custom Marshal
 
-### Batch 2 — Practical REST API (Target: 5 articles)
+### Batch 2 — Application Design & CRUD (Target: 15 articles)
 - [ ] G02-01 — Building a REST API with `net/http`
 - [ ] G02-02 — Request Validation and JSON Handling in Go
 - [ ] G02-03 — Implementing CRUD with PostgreSQL and `pgx`
-- [ ] G02-04 — Database Transactions: Commit, Rollback, and Failure Handling
-- [ ] G08-02 — Testing HTTP Handlers with `httptest`
-
-### Batch 3 — Concurrency & Leaks (Target: 6 articles)
-- [ ] G03-01 — Goroutines Explained: Execution, Scheduling, and Lifecycle
-- [ ] G03-02 — Channels vs Mutexes: Choosing the Right Synchronization
-- [ ] G03-03 — Race Conditions in Go and How to Detect Them
-- [ ] G03-04 — Common Goroutine Leaks and How to Prevent Them
-- [ ] G03-05 — Worker Pool Pattern with Bounded Concurrency
-- [ ] G04-06 — Profiling Go Applications with `pprof`
-
-### Batch 4 — HTTP Streaming & Uploads (Target: 6 articles)
-- [ ] G05-06 — Large File Uploads Without Loading Everything into Memory
-- [ ] G05-07 — Resumable Uploads: Why Multipart Upload Is Not Enough
-- [ ] G05-08 — Implementing the TUS Protocol in Go
-- [ ] G05-12 — Implementing Server-Sent Events (SSE) in Go
-- [ ] G05-17 — Implementing WebSocket in Go
-- [ ] G05-18 — WebSocket Read/Write Pumps and Connection Lifecycle
-
-### Batch 5 — Production Patterns (Target: 6 articles)
-- [ ] G07-01 — Building Background Jobs in Go
-- [ ] G07-02 — Retry Strategies, Exponential Backoff, and Jitter
-- [ ] G07-03 — Idempotency in Background Jobs
-- [ ] G02-09 — Graceful Shutdown for Go HTTP Servers
-- [ ] G09-02 — Structured Logging with `log/slog`
-- [ ] G09-03 — Health Checks: Readiness and Liveness
-
-**Current Progress:** Foundational modules and tests under development.
+- [ ] G02-04 — Database Transactions in Go: Commit, Rollback, and Failure Handling
+- [ ] G02-05 — Structuring a Go Application Without Overengineering
+- [ ] G02-06 - Repository Pattern in Go: When to Use It
+- [ ] G02-07 - Pagination, Filtering, and Sorting for REST APIs
+- [ ] G02-08 - Middleware Design in Go HTTP Servers
+- [ ] G02-09 - Graceful Shutdown for Go HTTP Servers
+- [ ] G02-10 - Idempotent API Design and Safe Retry Handling
+- [ ] G02-11 - Database Migrations in Go (goose/atlas)
+- [ ] G02-12 - Type-Safe SQL with `sqlc` vs Hand-Written Queries
+- [ ] G02-13 - Authentication: Sessions vs JWT in Go
+- [ ] G02-14 - Authorization Middleware and Per-Resource Access Checks
+- [ ] G02-15 - Consistent API Error Responses (RFC 9457 Problem Details)
+- [ ] G02-16 - CORS and CSRF for Go APIs
 
 ---
 
