@@ -33,13 +33,13 @@ go test -race ./...
 ### Batch 1 — Go Fundamentals for Developers (Target: 16 articles)
 - [x] G01-01 - Go Project Structure: Packages, Modules, and Imports
 - [x] G01-02 - Value vs Pointer Semantics in Go
-- [ ] G01-03 - Slices Explained: Length, Capacity, and Backing Arrays
-- [ ] G01-04 - Maps in Go: Zero Values, Mutability, and Concurrency
-- [ ] G01-05 - Interfaces in Go: Implicit Implementation and Practical Design
-- [ ] G01-06 - Error Handling in Go: Wrapping, Checking, and Sentinel Errors
-- [ ] G01-07 - `defer`, `panic`, and `recover`: When to Use Them
-- [ ] G01-08 - Generics in Go: Practical Use Cases Without Overengineering
-- [ ] G01-09 - Functional Options Pattern: When It Helps and When It Doesn't
+- [x] G01-03 - Slices Explained: Length, Capacity, and Backing Arrays
+- [x] G01-04 - Maps in Go: Zero Values, Mutability, and Concurrency
+- [x] G01-05 - Interfaces in Go: Implicit Implementation and Practical Design
+- [x] G01-06 - Error Handling in Go: Wrapping, Checking, and Sentinel Errors
+- [x] G01-07 - `defer`, `panic`, and `recover`: When to Use Them
+- [x] G01-08 - Generics in Go: Practical Use Cases Without Overengineering
+- [x] G01-09 - Functional Options Pattern: When It Helps and When It Doesn't
 - [ ] G01-10 - Go Context: Cancellation, Deadlines, and Request Scope
 - [ ] G01-11 - `io.Reader` and `io.Writer`: The Interfaces Everything Is Built On
 - [ ] G01-12 - Struct Embedding and Composition (Not Inheritance)
